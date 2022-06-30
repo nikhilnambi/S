@@ -15,10 +15,10 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use(express.static('./dist/<frontend>'));
+app.use(express.static('./dist/frontend'));
 
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist//<frontend>/index.html'))
+  res.sendFile(path.join(__dirname + '/dist/frontend/index.html'))
  });
 
 
